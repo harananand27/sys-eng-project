@@ -13,4 +13,5 @@ class PostsController < ApplicationController
 
   def delete
   end
+  
 end
