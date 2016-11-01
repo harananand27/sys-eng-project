@@ -1,2 +1,3 @@
-# sys-eng-project
-# sys-eng-project
+# Systems Engineering Project - Team Q
+
+A simple application for managing citations.

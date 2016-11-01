@@ -14,18 +14,18 @@
 ActiveRecord::Schema.define(version: 20161031151452) do
 
   create_table "citations", force: :cascade do |t|
-    t.string   "title"
-    t.string   "link"
-    t.string   "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",      limit: 255
+    t.string   "link",       limit: 255
+    t.string   "note",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password_hash"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "email",         limit: 255
+    t.string   "password_hash", limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
