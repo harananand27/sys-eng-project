@@ -15,6 +15,7 @@ Migrating to CreateUsers (20161031151452)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-11-01 11:56:31 +0000
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by Rails::WelcomeController#index as HTML
@@ -68,3 +69,78 @@ Started GET "/" for ::1 at 2016-11-01 19:09:13 +0000
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2016-11-02 12:38:35 +0000
+Processing by Rails::WelcomeController#index as */*
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.3.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 31ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+>>>>>>> 8e15ff3191a72a8c1e4e6b3c802d911fddd77772
+
+
+Started GET "/" for ::1 at 2016-11-02 15:41:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (14.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 245ms
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Javu/myrepos/sys-eng-project/app/assets/images
+  /Users/Javu/myrepos/sys-eng-project/app/assets/javascripts
+  /Users/Javu/myrepos/sys-eng-project/app/assets/stylesheets
+  /Users/Javu/myrepos/sys-eng-project/vendor/assets/javascripts
+  /Users/Javu/myrepos/sys-eng-project/vendor/assets/stylesheets
+  /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>SysengCitationManager</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2200797823605314296_70228740055980'
+
+
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.2ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.0ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Javu/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-02 15:42:57 +0000
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 187ms (Views: 186.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/posts.self-dc448ff99ab6a0232bcce01b523d19b6cdfd96ec03cfd5ef4037919098ec7c28.js?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/sessions.self-dc448ff99ab6a0232bcce01b523d19b6cdfd96ec03cfd5ef4037919098ec7c28.js?body=1" for ::1 at 2016-11-02 15:42:57 +0000
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2016-11-02 15:42:57 +0000
