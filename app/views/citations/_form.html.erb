@@ -1,0 +1,19 @@
+<div class="modal">
+  <h2 class="modal_title"><%= @text_string %></h2>
+  <%= form_for(@citation) do |f| %>
+    <% if @citation.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @citation.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= f.text_field :title, :class => "modal_field", :placeholder => "Title" %>
+    <%= f.text_field :link, class: "modal_field", :placeholder => "Link" %>
+    <%= f.text_area :note, class: "modal_field", :placeholder => "Notes" %>
+    <%= f.submit  @text_string, :class => "modal_submit" %>
+  <% end %>
+</div>

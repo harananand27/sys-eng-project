@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SysengCitationManager</title>
-  <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= stylesheet_link_tag controller_name if asset_path(controller_name) %>
+  <title>CiteMeThis</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= yield :header %>
 </head>
 <body>
+  <div class="navigation">
+    <%= link_to "CiteMeThis", citations_url, :class => "navigation_title" %>
+    <div class="navigation_user">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log out", session_path("current"), method: "delete" %>
+      <% end %>
+    </div>
+  </div>
 
-	<p>Let's be nice</p>
-	
-	<%= yield %>
-	
-	<%= javascript_include_tag 'application' %>
-	<%= yield :footer %>
-	
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+  
+  <%= yield %>
+
 </body>
 </html>

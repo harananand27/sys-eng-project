@@ -1,21 +1,10 @@
 Rails.application.routes.draw do
+  get 'citations/new'
 
-  root 'posts#index'
+  resources :users
+  resources :sessions
+  resources :citations
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'posts/index'
-  
-  get 'posts/new'
-
-  get 'posts/create'
-
-  get 'posts/update'
-
-  get 'posts/delete'
-
+  root 'sessions#new'
+  resources :welcome
 end

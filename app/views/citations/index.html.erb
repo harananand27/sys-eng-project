@@ -1,0 +1,27 @@
+<div class="citations">
+	<div class="citations_titlearea">
+		<h1 class="citations_title">My Citations</h1>
+		<div class="citations_buttonarea">
+			<%= link_to "Add Citation", new_citation_url, class: "citations_button" %>
+		</div>
+	</div>
+	<div class="citations_area">
+		<% if @citations %>
+		  <% @citations.each do |citation| %>
+		    <div class="citation" data-citation-id="<%= citation.user_id %>">
+		      <div class="citation_content">
+		      	<h2 class="citation_title"><%= citation.title %>&nbsp;<span class="citation_link">(<%= citation.link %>)</span>
+		      	</h2>
+		      	<p class="citation_note"><%= citation.note %></p>
+		      </div>
+		      <div class="citation_modify">
+		      	<%= link_to 'EDIT', edit_citation_path(citation), class: "citation_edit" %>
+		      	<%= link_to 'DELETE', citation, method: :delete, class: "citation_delete", data: { confirm: 'Are you sure?' } %>
+		      </div>
+		    </div>
+		  <% end %>
+		<% else %>
+			Nothing here
+		<% end %>
+	</div>
+</div>
