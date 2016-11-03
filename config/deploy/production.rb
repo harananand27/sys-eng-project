@@ -1,4 +1,5 @@
 server '54.154.244.250', user: 'ec2-user', roles: %w{web app}
+server 'prod-db.ckmzy5mny0df.eu-west-1.rds.amazonaws.com:3306', user: 'ec2-user', roles: %w{db}
 
 # server-based syntax
 # ======================

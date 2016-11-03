@@ -6,3 +6,5 @@ config/application.yml
 !.elasticbeanstalk/*.global.yml
 
 log/*
+
+tmp/*
