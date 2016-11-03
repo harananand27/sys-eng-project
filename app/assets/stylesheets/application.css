@@ -76,7 +76,7 @@
  	text-align: center;
  	
  }
- .modal_link:focus {
+ .modal_link:hover {
  	color: white;
  }
 
