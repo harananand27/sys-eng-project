@@ -1,8 +1,8 @@
 <div class="modal">
   <h2 class="modal_title">Log in</h2>
   <%= form_tag sessions_path do %>
-    <%= text_field_tag :email, params[:email], :class => "modal_field" %>
-    <%= password_field_tag :password, nil, class: "modal_field" %>
+    <%= text_field_tag :email, params[:email], :class => "modal_field", placeholder: "Email address" %>
+    <%= password_field_tag :password, nil, class: "modal_field", placeholder: "Password" %>
     <%= submit_tag "Log in", :class => "modal_submit" %>
     <%= link_to "New user? Sign Up", new_user_url, :class => "modal_link" %>
   <% end %>
