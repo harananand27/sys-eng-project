@@ -1,3 +1,7 @@
+set :stage, :staging
+set :rails_env, :staging
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'staging'))
+
 server '54.171.137.107', user: 'ubuntu', roles: %w{web app db}
 
 # server-based syntax
