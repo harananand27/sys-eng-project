@@ -16,7 +16,7 @@
 		      </div>
 		      <div class="citation_modify">
 		      	<%= link_to 'EDIT', edit_citation_path(citation), class: "citation_edit" %>
-		      	<%= link_to 'DELETE', citation, method: :delete, class: "citation_delete", data: { confirm: 'Are you sure?' } %>
+		      	<%= link_to 'DELETE', citation, :method => :delete, :class => "citation_delete", data: { confirm: 'Are you sure?' } %>
 		      </div>
 		    </div>
 		  <% end %>
