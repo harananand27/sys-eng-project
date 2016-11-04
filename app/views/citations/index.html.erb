@@ -6,6 +6,7 @@
 		</div>
 	</div>
 	<div class="citations_area">
+  <!-- If citations exist, present them for the user -->
 		<% if @citations %>
 		  <% @citations.each do |citation| %>
 		    <div class="citation" data-citation-id="<%= citation.user_id %>">
@@ -14,6 +15,7 @@
 		      	</h2>
 		      	<p class="citation_note"><%= citation.note %></p>
 		      </div>
+					  <!-- Edit and delete citations -->
 		      <div class="citation_modify">
 		      	<%= link_to 'EDIT', edit_citation_path(citation), class: "citation_edit" %>
 		      	<%= link_to 'DELETE', citation, :method => :delete, :class => "citation_delete", data: { confirm: 'Are you sure?' } %>

@@ -1,5 +1,7 @@
 <div class="modal">
   <h2 class="modal_title"><%= @text_string %></h2>
+
+  <!-- Present citation errors -->
   <%= form_for(@citation) do |f| %>
     <% if @citation.errors.any? %>
       <div class="error_messages">
@@ -11,6 +13,8 @@
         </ul>
       </div>
     <% end %>
+
+  <!-- Citations form -->    
     <%= f.text_field :title, :class => "modal_field", :placeholder => "Title" %>
     <%= f.text_field :link, class: "modal_field", :placeholder => "Link" %>
     <%= f.text_area :note, class: "modal_field", :placeholder => "Notes" %>

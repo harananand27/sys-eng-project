@@ -1,4 +1,5 @@
 <div class="modal">
+    <!-- Display sign up errors-->
 <% if @user.errors.any? %>
   <div class="error_messages">
     <h2>Form is invalid</h2>
@@ -9,6 +10,7 @@
     </ul>
   </div>
 <% end %>
+  <!-- Sign up form -->
   <h2 class="modal_title">Sign Up</h2>
   <%= form_for @user do |f| %>
     <%= f.text_field :email, :class => "modal_field", placeholder: "Email address" %>
